@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pousada Ouro Preto | Hospedagem em Ouro Preto - MG</title>
+
+  <meta name="description" content="Pousada Ouro Preto — hospedagem no Centro de Ouro Preto, Minas Gerais. Pouso Ouro Preto LTDA | CNPJ 45.419.646/0001-46.">
+  <meta name="theme-color" content="#17251f">
+
+  <style>
+    :root{
+      --green:#17251f;
+      --green-2:#24382f;
+      --gold:#b58a4a;
+      --gold-light:#d6b77c;
+      --cream:#f7f3ec;
+      --white:#fff;
+      --text:#242424;
+      --muted:#707070;
+      --border:#e8e2d8;
+      --success:#27784d;
+      --success-bg:#e8f5ed;
+      --shadow:0 18px 50px rgba(0,0,0,.10);
+      --radius:18px;
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:#fff;
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .container{
+      width:min(1180px,92%);
+      margin:auto;
+    }
+
+    /* TOP BAR */
+    .topbar{
+      background:var(--green);
+      color:#fff;
+      font-size:13px;
+      padding:9px 0;
+    }
+
+    .topbar-content{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+    }
+
+    .topbar strong{
+      color:var(--gold-light);
+    }
+
+    /* HEADER */
+    header{
+      background:#fff;
+      border-bottom:1px solid var(--border);
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+
+    .header-inner{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:13px;
+    }
+
+    .logo-mark{
+      width:44px;
+      height:44px;
+      border-radius:12px;
+      background:var(--green);
+      color:var(--gold-light);
+      display:grid;
+      place-items:center;
+      font-size:20px;
+      font-weight:700;
+      border:1px solid rgba(181,138,74,.5);
+    }
+
+    .logo-text strong{
+      display:block;
+      color:var(--green);
+      font-size:17px;
+      letter-spacing:.3px;
+    }
+
+    .logo-text span{
+      display:block;
+      color:#888;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:1.5px;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:28px;
+      font-size:14px;
+      font-weight:600;
+    }
+
+    nav a{
+      color:#454545;
+      transition:.2s;
+    }
+
+    nav a:hover{
+      color:var(--gold);
+    }
+
+    .menu-btn{
+      display:none;
+      border:0;
+      background:var(--green);
+      color:#fff;
+      padding:10px 13px;
+      border-radius:10px;
+      cursor:pointer;
+      font-size:18px;
+    }
+
+    /* HERO */
+    .hero{
+      min-height:620px;
+      position:relative;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 82% 22%, rgba(214,183,124,.30), transparent 24%),
+        radial-gradient(circle at 15% 80%, rgba(181,138,74,.12), transparent 30%),
+        linear-gradient(135deg,#17251f 0%,#24382f 55%,#31483d 100%);
+      color:#fff;
+      display:flex;
+      align-items:center;
+    }
+
+    .hero:before{
+      content:"";
+      position:absolute;
+      width:500px;
+      height:500px;
+      border:1px solid rgba(214,183,124,.25);
+      border-radius:50%;
+      right:-130px;
+      top:-130px;
+    }
+
+    .hero:after{
+      content:"";
+      position:absolute;
+      width:320px;
+      height:320px;
+      border:1px solid rgba(214,183,124,.18);
+      border-radius:50%;
+      right:10px;
+      bottom:-170px;
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      max-width:720px;
+      padding:80px 0;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      color:var(--gold-light);
+      text-transform:uppercase;
+      letter-spacing:2px;
+      font-size:12px;
+      font-weight:700;
+      margin-bottom:20px;
+    }
+
+    .eyebrow:before{
+      content:"";
+      width:28px;
+      height:1px;
+      background:var(--gold-light);
+    }
+
+    .hero h1{
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:clamp(42px,6vw,76px);
+      line-height:1.02;
+      font-weight:500;
+      margin-bottom:24px;
+      letter-spacing:-2px;
+    }
+
+    .hero h1 span{
+      color:var(--gold-light);
+    }
+
+    .hero p{
+      color:rgba(255,255,255,.82);
+      font-size:18px;
+      max-width:610px;
+      margin-bottom:34px;
+    }
+
+    .buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:13px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:0 23px;
+      border-radius:10px;
+      font-weight:700;
+      font-size:14px;
+      transition:.2s;
+    }
+
+    .btn-primary{
+      background:var(--gold);
+      color:#fff;
+    }
+
+    .btn-primary:hover{
+      background:#9d763d;
+      transform:translateY(-1px);
+    }
+
+    .btn-outline{
+      border:1px solid rgba(255,255,255,.35);
+      color:#fff;
+    }
+
+    .btn-outline:hover{
+      background:rgba(255,255,255,.08);
+    }
+
+    /* STATUS */
+    .status-strip{
+      background:#fff;
+      box-shadow:0 10px 35px rgba(0,0,0,.08);
+      position:relative;
+      z-index:5;
+      margin-top:-55px;
+      border-radius:18px;
+    }
+
+    .status-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+    }
+
+    .status-item{
+      padding:25px 24px;
+      border-right:1px solid var(--border);
+    }
+
+    .status-item:last-child{
+      border-right:0;
+    }
+
+    .status-item small{
+      display:block;
+      color:#888;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      font-size:10px;
+      margin-bottom:6px;
+      font-weight:700;
+    }
+
+    .status-item strong{
+      color:var(--green);
+      font-size:16px;
+    }
+
+    .active{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      color:var(--success)!important;
+    }
+
+    .active:before{
+      content:"";
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:#35a969;
+      box-shadow:0 0 0 4px #dff3e8;
+    }
+
+    /* SECTIONS */
+    section{
+      padding:95px 0;
+    }
+
+    .section-head{
+      max-width:720px;
+      margin-bottom:48px;
+    }
+
+    .section-head .label{
+      color:var(--gold);
+      text-transform:uppercase;
+      letter-spacing:2px;
+      font-size:11px;
+      font-weight:800;
+      margin-bottom:12px;
+    }
+
+    .section-head h2{
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:42px;
+      line-height:1.15;
+      color:var(--green);
+      font-weight:500;
+      margin-bottom:14px;
+    }
+
+    .section-head p{
+      color:var(--muted);
+      font-size:16px;
+    }
+
+    /* ABOUT */
+    .about{
+      background:var(--cream);
+    }
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:70px;
+      align-items:center;
+    }
+
+    .about-card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:35px;
+      box-shadow:var(--shadow);
+    }
+
+    .about-card .number{
+      font-size:48px;
+      color:var(--gold);
+      font-family:Georgia, serif;
+      margin-bottom:12px;
+    }
+
+    .about-card h3{
+      color:var(--green);
+      font-size:21px;
+      margin-bottom:10px;
+    }
+
+    .about-card p{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .features{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+      margin-top:25px;
+    }
+
+    .feature{
+      background:#fff;
+      border:1px solid var(--border);
+      padding:20px;
+      border-radius:14px;
+    }
+
+    .feature strong{
+      display:block;
+      color:var(--green);
+      margin-bottom:5px;
+    }
+
+    .feature span{
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* LOCATION */
+    .location-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:25px;
+    }
+
+    .info-card{
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:30px;
+      background:#fff;
+    }
+
+    .info-card h3{
+      color:var(--green);
+      margin-bottom:20px;
+      font-size:19px;
+    }
+
+    .info-row{
+      padding:13px 0;
+      border-bottom:1px solid var(--border);
+    }
+
+    .info-row:last-child{
+      border-bottom:0;
+    }
+
+    .info-row small{
+      display:block;
+      color:#999;
+      text-transform:uppercase;
+      letter-spacing:.8px;
+      font-size:10px;
+      font-weight:700;
+      margin-bottom:3px;
+    }
+
+    .info-row strong{
+      font-size:14px;
+      color:#333;
+    }
+
+    .map-link{
+      margin-top:20px;
+      display:inline-flex;
+      color:var(--gold);
+      font-weight:700;
+      font-size:13px;
+    }
+
+    /* CADASTRO */
+    .registration{
+      background:var(--cream);
+    }
+
+    .registration-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .data-card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:16px;
+      overflow:hidden;
+    }
+
+    .data-card.full{
+      grid-column:1/-1;
+    }
+
+    .data-card-header{
+      padding:18px 22px;
+      background:#fbfaf8;
+      border-bottom:1px solid var(--border);
+      color:var(--green);
+      font-weight:800;
+    }
+
+    .data-list{
+      padding:6px 22px 18px;
+    }
+
+    .data{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      padding:12px 0;
+      border-bottom:1px solid #eee;
+      font-size:13px;
+    }
+
+    .data:last-child{
+      border-bottom:0;
+    }
+
+    .data span{
+      color:#777;
+    }
+
+    .data strong{
+      color:#292929;
+      text-align:right;
+    }
+
+    /* CNAE */
+    .cnae{
+      border-left:4px solid var(--gold);
+      background:#fff;
+      border-radius:0 14px 14px 0;
+      padding:24px;
+      margin-top:20px;
+    }
+
+    .cnae small{
+      color:var(--gold);
+      text-transform:uppercase;
+      font-weight:800;
+      letter-spacing:1px;
+    }
+
+    .cnae h3{
+      color:var(--green);
+      margin:5px 0;
+    }
+
+    .cnae p{
+      color:#666;
+      font-size:14px;
+    }
+
+    /* CONTACT CTA */
+    .contact-cta{
+      background:var(--green);
+      color:#fff;
+      text-align:center;
+    }
+
+    .contact-cta h2{
+      font-family:Georgia, serif;
+      font-size:42px;
+      font-weight:500;
+      margin-bottom:15px;
+    }
+
+    .contact-cta p{
+      color:rgba(255,255,255,.72);
+      max-width:620px;
+      margin:0 auto 28px;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#101814;
+      color:#fff;
+      padding:50px 0 25px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.3fr 1fr 1fr;
+      gap:50px;
+      padding-bottom:40px;
+    }
+
+    footer h3{
+      color:var(--gold-light);
+      margin-bottom:13px;
+      font-family:Georgia,serif;
+      font-weight:500;
+    }
+
+    footer p,
+    footer li{
+      color:rgba(255,255,255,.62);
+      font-size:13px;
+    }
+
+    footer ul{
+      list-style:none;
+    }
+
+    footer li{
+      margin-bottom:8px;
+    }
+
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,.1);
+      padding-top:20px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      color:rgba(255,255,255,.45);
+      font-size:11px;
+    }
+
+    /* MOBILE */
+    @media(max-width:850px){
+      nav{
+        display:none;
+        position:absolute;
+        left:0;
+        right:0;
+        top:78px;
+        background:#fff;
+        padding:20px 6%;
+        border-bottom:1px solid var(--border);
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      nav.open{
+        display:flex;
+      }
+
+      .menu-btn{
+        display:block;
+      }
+
+      .status-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .status-item:nth-child(2){
+        border-right:0;
+      }
+
+      .status-item:nth-child(3),
+      .status-item:nth-child(4){
+        border-top:1px solid var(--border);
+      }
+
+      .about-grid,
+      .location-grid,
+      .registration-grid{
+        grid-template-columns:1fr;
+      }
+
+      .data-card.full{
+        grid-column:auto;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media(max-width:560px){
+      .topbar-content{
+        justify-content:center;
+        text-align:center;
+      }
+
+      .topbar-content span:last-child{
+        display:none;
+      }
+
+      .hero{
+        min-height:580px;
+      }
+
+      .hero h1{
+        font-size:46px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .status-grid{
+        grid-template-columns:1fr;
+      }
+
+      .status-item{
+        border-right:0;
+        border-bottom:1px solid var(--border);
+      }
+
+      .status-item:last-child{
+        border-bottom:0;
+      }
+
+      section{
+        padding:70px 0;
+      }
+
+      .section-head h2,
+      .contact-cta h2{
+        font-size:34px;
+      }
+
+      .features{
+        grid-template-columns:1fr;
+      }
+
+      .data{
+        flex-direction:column;
+        gap:4px;
+      }
+
+      .data strong{
+        text-align:left;
+      }
+
+      .footer-bottom{
+        flex-direction:column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="container topbar-content">
+      <span><strong>Pousada Ouro Preto</strong> · Hospedagem em Ouro Preto</span>
+      <span>CNPJ: 45.419.646/0001-46</span>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-inner">
+
+      <a href="#inicio" class="logo">
+        <div class="logo-mark">PO</div>
+
+        <div class="logo-text">
+          <strong>Pousada Ouro Preto</strong>
+          <span>Hospedagem & Conforto</span>
+        </div>
+      </a>
+
+      <nav id="nav">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#localizacao">Localização</a>
+        <a href="#empresa">Empresa</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="inicio">
+
+    <section class="hero">
+      <div class="container hero-content">
+
+        <div class="eyebrow">Ouro Preto · Minas Gerais</div>
+
+        <h1>
+          Uma estadia para<br>
+          <span>viver Ouro Preto.</span>
+        </h1>
+
+        <p>
+          A Pousada Ouro Preto está localizada no Centro de Ouro Preto,
+          oferecendo uma experiência de hospedagem em uma das cidades
+          históricas mais marcantes de Minas Gerais.
+        </p>
+
+        <div class="buttons">
+          <a class="btn btn-primary" href="#localizacao">
+            Conheça a localização
+          </a>
+
+          <a class="btn btn-outline" href="#contato">
+            Informações de contato
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- STATUS -->
+    <div class="container">
+      <div class="status-strip">
+
+        <div class="status-grid">
+
+          <div class="status-item">
+            <small>Situação cadastral</small>
+            <strong class="active">ATIVA</strong>
+          </div>
+
+          <div class="status-item">
+            <small>Tipo</small>
+            <strong>Matriz</strong>
+          </div>
+
+          <div class="status-item">
+            <small>Porte</small>
+            <strong>Micro Empresa</strong>
+          </div>
+
+          <div class="status-item">
+            <small>Fundação</small>
+            <strong>23/02/2022</strong>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="about">
+
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div>
+            <div class="section-head">
+              <div class="label">Sobre a pousada</div>
+
+              <h2>
+                Conforto e localização
+                no coração de Ouro Preto.
+              </h2>
+
+              <p>
+                A Pousada Ouro Preto, nome fantasia de Pouso Ouro Preto LTDA,
+                está estabelecida no Centro de Ouro Preto, em Minas Gerais.
+                Sua atividade principal está relacionada à hospedagem,
+                com atuação registrada no segmento de hotéis.
+              </p>
+            </div>
+
+            <div class="features">
+
+              <div class="feature">
+                <strong>Localização central</strong>
+                <span>Endereço situado no Centro de Ouro Preto.</span>
+              </div>
+
+              <div class="feature">
+                <strong>Hospedagem</strong>
+                <span>Atividade principal registrada como hotéis.</span>
+              </div>
+
+              <div class="feature">
+                <strong>Empresa ativa</strong>
+                <span>Cadastro empresarial com situação ATIVA.</span>
+              </div>
+
+              <div class="feature">
+                <strong>Desde 2022</strong>
+                <span>Empresa aberta em 23 de fevereiro de 2022.</span>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="about-card">
+
+            <div class="number">2022</div>
+
+            <h3>Uma presença no Centro de Ouro Preto</h3>
+
+            <p>
+              A empresa Pouso Ouro Preto LTDA foi constituída em
+              23 de fevereiro de 2022 e possui como nome fantasia
+              Pousada Ouro Preto.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- LOCALIZAÇÃO -->
+    <section id="localizacao">
+
+      <div class="container">
+
+        <div class="section-head">
+          <div class="label">Localização</div>
+
+          <h2>Estamos no Centro de Ouro Preto.</h2>
+
+          <p>
+            Confira os dados de localização e encontre o endereço
+            da Pousada Ouro Preto no mapa.
+          </p>
+        </div>
+
+        <div class="location-grid">
+
+          <div class="info-card">
+
+            <h3>Endereço</h3>
+
+            <div class="info-row">
+              <small>Logradouro</small>
+              <strong>Largo Musicista Jose dos Anjos Costa, 72</strong>
+            </div>
+
+            <div class="info-row">
+              <small>Bairro</small>
+              <strong>Centro</strong>
+            </div>
+
+            <div class="info-row">
+              <small>Município</small>
+              <strong>Ouro Preto — MG</strong>
+            </div>
+
+            <div class="info-row">
+              <small>CEP</small>
+              <strong>35400-141</strong>
+            </div>
+
+            <a
+              class="map-link"
+              target="_blank"
+              rel="noopener"
+              href="https://www.google.com.br/maps/search/Largo%20Musicista%20Jose%20dos%20Anjos%20Costa%2072%20Centro%20Ouro%20Preto%20MG">
+              Abrir localização no Google Maps →
+            </a>
+
+          </div>
+
+          <div class="info-card">
+
+            <h3>Para correspondência</h3>
+
+            <div class="info-row">
+              <small>Razão social</small>
+              <strong>Pouso Ouro Preto LTDA</strong>
+            </div>
+
+            <div class="info-row">
+              <small>Nome fantasia</small>
+              <strong>Pousada Ouro Preto</strong>
+            </div>
+
+            <div class="info-row">
+              <small>Endereço</small>
+              <strong>
+                Largo Musicista Jose dos Anjos Costa, 72<br>
+                Centro — Ouro Preto/MG
+              </strong>
+            </div>
+
+            <div class="info-row">
+              <small>CEP</small>
+              <strong>35400-141</strong>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- EMPRESA -->
+    <section id="empresa" class="registration">
+
+      <div class="container">
+
+        <div class="section-head">
+          <div class="label">Informações empresariais</div>
+
+          <h2>Dados cadastrais da empresa.</h2>
+
+          <p>
+            Informações de registro apresentadas de forma organizada
+            para consulta e identificação empresarial.
+          </p>
+        </div>
+
+        <div class="registration-grid">
+
+          <!-- IDENTIFICAÇÃO -->
+          <div class="data-card">
+
+            <div class="data-card-header">
+              Identificação
+            </div>
+
+            <div class="data-list">
+
+              <div class="data">
+                <span>CNPJ</span>
+                <strong>45.419.646/0001-46</strong>
+              </div>
+
+              <div class="data">
+                <span>Razão Social</span>
+                <strong>Pouso Ouro Preto LTDA</strong>
+              </div>
+
+              <div class="data">
+                <span>Nome Fantasia</span>
+                <strong>Pousada Ouro Preto</strong>
+              </div>
+
+              <div class="data">
+                <span>Tipo</span>
+                <strong>Matriz</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- SITUAÇÃO -->
+          <div class="data-card">
+
+            <div class="data-card-header">
+              Situação cadastral
+            </div>
+
+            <div class="data-list">
+
+              <div class="data">
+                <span>Situação</span>
+                <strong class="active">ATIVA</strong>
+              </div>
+
+              <div class="data">
+                <span>Data da situação</span>
+                <strong>23/02/2022</strong>
+              </div>
+
+              <div class="data">
+                <span>Data de abertura</span>
+                <strong>23/02/2022</strong>
+              </div>
+
+              <div class="data">
+                <span>Porte</span>
+                <strong>Micro Empresa</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- CONSTITUIÇÃO -->
+          <div class="data-card">
+
+            <div class="data-card-header">
+              Constituição empresarial
+            </div>
+
+            <div class="data-list">
+
+              <div class="data">
+                <span>Natureza Jurídica</span>
+                <strong>Sociedade Empresária Limitada</strong>
+              </div>
+
+              <div class="data">
+                <span>Capital Social</span>
+                <strong>R$ 110.000,00</strong>
+              </div>
+
+              <div class="data">
+                <span>Opção pelo MEI</span>
+                <strong>Não</strong>
+              </div>
+
+              <div class="data">
+                <span>Opção pelo Simples</span>
+                <strong>Sim</strong>
+              </div>
+
+              <div class="data">
+                <span>Data opção Simples</span>
+                <strong>23/02/2022</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- CONTATO -->
+          <div class="data-card">
+
+            <div class="data-card-header">
+              Contatos
+            </div>
+
+            <div class="data-list">
+
+              <div class="data">
+                <span>E-mail</span>
+                <strong>re*****@*****.com.br</strong>
+              </div>
+
+              <div class="data">
+                <span>Telefone</span>
+                <strong>(31) 355****-****</strong>
+              </div>
+
+              <div class="data">
+                <span>Município</span>
+                <strong>Ouro Preto</strong>
+              </div>
+
+              <div class="data">
+                <span>Estado</span>
+                <strong>Minas Gerais</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- ENDEREÇO -->
+          <div class="data-card full">
+
+            <div class="data-card-header">
+              Endereço empresarial
+            </div>
+
+            <div class="data-list">
+
+              <div class="data">
+                <span>Logradouro</span>
+                <strong>Largo Musicista Jose dos Anjos Costa, 72</strong>
+              </div>
+
+              <div class="data">
+                <span>Bairro</span>
+                <strong>Centro</strong>
+              </div>
+
+              <div class="data">
+                <span>CEP</span>
+                <strong>35400-141</strong>
+              </div>
+
+              <div class="data">
+                <span>Município</span>
+                <strong>Ouro Preto — MG</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- CNAE -->
+        <div class="cnae">
+
+          <small>Atividade econômica principal</small>
+
+          <h3>
+            55.10-8-01 — Hotéis
+          </h3>
+
+          <p>
+            Atividade principal registrada para a empresa.
+          </p>
+
+        </div>
+
+        <div class="cnae">
+
+          <small>Atividade econômica secundária</small>
+
+          <h3>
+            55.10-8-02 — Apart-hotéis
+          </h3>
+
+          <p>
+            Atividade secundária registrada para a empresa.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="contact-cta">
+
+      <div class="container">
+
+        <h2>Pousada Ouro Preto</h2>
+
+        <p>
+          Informações cadastrais e localização da empresa
+          Pouso Ouro Preto LTDA, estabelecida no Centro de Ouro Preto/MG.
+        </p>
+
+        <div class="buttons" style="justify-content:center">
+
+          <a
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener"
+            href="https://www.google.com.br/maps/search/Largo%20Musicista%20Jose%20dos%20Anjos%20Costa%2072%20Centro%20Ouro%20Preto%20MG">
+            Ver no mapa
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+          <h3>Pousada Ouro Preto</h3>
+
+          <p>
+            Pouso Ouro Preto LTDA<br>
+            Hospedagem em Ouro Preto — MG.
+          </p>
+        </div>
+
+        <div>
+          <h3>Empresa</h3>
+
+          <ul>
+            <li>CNPJ: 45.419.646/0001-46</li>
+            <li>Matriz</li>
+            <li>Situação: ATIVA</li>
+            <li>Micro Empresa</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Endereço</h3>
+
+          <p>
+            Largo Musicista Jose dos Anjos Costa, 72<br>
+            Centro<br>
+            Ouro Preto — MG<br>
+            CEP 35400-141
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Pousada Ouro Preto. Todos os direitos reservados.
+        </span>
+
+        <span>
+          Pouso Ouro Preto LTDA · CNPJ 45.419.646/0001-46
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script>
+    function toggleMenu(){
+      document.getElementById("nav").classList.toggle("open");
+    }
+
+    document.querySelectorAll("nav a").forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("nav").classList.remove("open");
+      });
+    });
+  </script>
+
+</body>
+</html>
